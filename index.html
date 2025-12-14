@@ -20,7 +20,16 @@
             <nav class="main-nav" aria-label="Main navigation">
                 <ul>
                     <li><a href="#" class="active">Home</a></li>
-                    <li><a href="#">Shop</a></li>
+                    <li class="nav-item dropdown">
+                        <a href="#" class="dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">Shop</a>
+                        <div class="dropdown-menu" role="menu" aria-label="Shop submenu">
+                            <a role="menuitem" href="#" class="dropdown-item">Men</a>
+                            <a role="menuitem" href="#" class="dropdown-item">Women</a>
+                            <a role="menuitem" href="#" class="dropdown-item">Kids</a>
+                            <a role="menuitem" href="#" class="dropdown-item">Accessories</a>
+                            <a role="menuitem" href="#" class="dropdown-item">Perfumes</a>
+                        </div>
+                    </li>
                     <li><a href="#">Blog</a></li>
                 </ul>
                 <div class="nav-underline" aria-hidden="true"></div>
@@ -50,13 +59,160 @@
         </div>
     </header>
 
-    <main class="hero-mockup">
-        <section class="mockup-card">
-            <h1 class="mockup-title">Premium Styles, Everyday Wear</h1>
-            <p class="mockup-sub">A calm, neutral palette and refined UI for a premium fashion brand.</p>
+    <main class="page">
+        <section class="hero-mockup">
+            <div class="mockup-card">
+                <div class="hero-copy">
+                    <p class="eyebrow">Limited Release · FW25</p>
+                    <h1 class="mockup-title">Premium Styles, Everyday Wear</h1>
+                    <p class="mockup-sub">A calm, neutral palette and refined silhouettes crafted for a modern wardrobe.</p>
+                    <div class="hero-actions">
+                        <a class="btn primary" href="#featured">Shop Featured</a>
+                        <a class="btn ghost" href="#new">View New Arrivals</a>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="hero-badge">New Season</div>
+                    <div class="hero-pane">
+                        <div class="pane-top">Silk Blazer · Mist</div>
+                        <div class="pane-bottom">Layered comfort, tailored precision.</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="new" class="product-section alt">
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow">Fresh drops</p>
+                    <h2>New Arrivals</h2>
+                </div>
+                <a class="link-cta" href="#">Shop new</a>
+            </div>
+            <div class="product-grid">
+                <article class="product-card">
+                    <div class="pill">Just in</div>
+                    <div class="product-img sage" aria-hidden="true"></div>
+                    <h3>Relaxed Trench · Sage</h3>
+                    <p class="desc">Water-resistant cotton blend with storm flap.</p>
+                    <div class="meta"><span class="price">$380</span><span class="rating">4.6 ★</span></div>
+                </article>
+                <article class="product-card">
+                    <div class="pill">New</div>
+                    <div class="product-img ivory" aria-hidden="true"></div>
+                    <h3>Merino Knit · Ivory</h3>
+                    <p class="desc">Lightweight, breathable, lounge-to-street.</p>
+                    <div class="meta"><span class="price">$190</span><span class="rating">4.5 ★</span></div>
+                </article>
+                <article class="product-card">
+                    <div class="pill">Drop</div>
+                    <div class="product-img cobalt" aria-hidden="true"></div>
+                    <h3>Statement Tote · Cobalt</h3>
+                    <p class="desc">Italian leather, structured silhouette.</p>
+                    <div class="meta"><span class="price">$260</span><span class="rating">4.7 ★</span></div>
+                </article>
+            </div>
+        </section>
+
+        <section id="featured" class="product-section">
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow">Curated picks</p>
+                    <h2>Featured Collection</h2>
+                </div>
+                <a class="link-cta" href="#">View all</a>
+            </div>
+            <div class="product-grid">
+                <article class="product-card">
+                    <div class="pill">Bestseller</div>
+                    <div class="product-img soft" aria-hidden="true"></div>
+                    <h3>Cashmere Coat · Sand</h3>
+                    <p class="desc">Structured shoulder, buttery-soft handfeel.</p>
+                    <div class="meta"><span class="price">$460</span><span class="rating">4.8 ★</span></div>
+                </article>
+                <article class="product-card">
+                    <div class="pill">New</div>
+                    <div class="product-img rose" aria-hidden="true"></div>
+                    <h3>Silk Midi Dress · Rose</h3>
+                    <p class="desc">Bias cut, fluid drape, evening ready.</p>
+                    <div class="meta"><span class="price">$320</span><span class="rating">4.7 ★</span></div>
+                </article>
+                <article class="product-card">
+                    <div class="pill">Limited</div>
+                    <div class="product-img dusk" aria-hidden="true"></div>
+                    <h3>Tailored Suit · Dusk</h3>
+                    <p class="desc">Featherweight wool, minimalist lines.</p>
+                    <div class="meta"><span class="price">$540</span><span class="rating">4.9 ★</span></div>
+                </article>
+            </div>
+        </section>
+
+        <section id="best" class="product-section">
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow">Most loved</p>
+                    <h2>Best Sellers</h2>
+                </div>
+                <a class="link-cta" href="#">View all</a>
+            </div>
+            <div class="product-grid">
+                <article class="product-card">
+                    <div class="pill">Top rated</div>
+                    <div class="product-img noir" aria-hidden="true"></div>
+                    <h3>City Chelsea · Noir</h3>
+                    <p class="desc">Hand-finished leather, cloud-foam insole.</p>
+                    <div class="meta"><span class="price">$240</span><span class="rating">4.9 ★</span></div>
+                </article>
+                <article class="product-card">
+                    <div class="pill">Signature</div>
+                    <div class="product-img amber" aria-hidden="true"></div>
+                    <h3>Everyday Crossbody · Amber</h3>
+                    <p class="desc">Magnetic closure, modular strap system.</p>
+                    <div class="meta"><span class="price">$210</span><span class="rating">4.8 ★</span></div>
+                </article>
+                <article class="product-card">
+                    <div class="pill">Essential</div>
+                    <div class="product-img linen" aria-hidden="true"></div>
+                    <h3>Oxford Shirt · Linen</h3>
+                    <p class="desc">Washed finish, perfect for layering.</p>
+                    <div class="meta"><span class="price">$130</span><span class="rating">4.6 ★</span></div>
+                </article>
+            </div>
+        </section>
+
+        <section id="must" class="product-section">
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow">Editor’s pick</p>
+                    <h2>Must Have</h2>
+                </div>
+                <a class="link-cta" href="#">Shop the edit</a>
+            </div>
+            <div class="product-grid">
+                <article class="product-card">
+                    <div class="pill">Must</div>
+                    <div class="product-img soft" aria-hidden="true"></div>
+                    <h3>Structured Tote · Sand</h3>
+                    <p class="desc">Everyday carry with luxe hardware.</p>
+                    <div class="meta"><span class="price">$230</span><span class="rating">4.8 ★</span></div>
+                </article>
+                <article class="product-card">
+                    <div class="pill">Pick</div>
+                    <div class="product-img dusk" aria-hidden="true"></div>
+                    <h3>Layered Knit · Dusk</h3>
+                    <p class="desc">Soft-touch knit with tonal texture.</p>
+                    <div class="meta"><span class="price">$180</span><span class="rating">4.7 ★</span></div>
+                </article>
+                <article class="product-card">
+                    <div class="pill">Editor</div>
+                    <div class="product-img amber" aria-hidden="true"></div>
+                    <h3>Leather Belt · Amber</h3>
+                    <p class="desc">Italian hide, minimalist buckle.</p>
+                    <div class="meta"><span class="price">$95</span><span class="rating">4.6 ★</span></div>
+                </article>
+            </div>
         </section>
     </main>
-</main>
 
     <footer class="site-footer" role="contentinfo">
         <div class="footer-container">
