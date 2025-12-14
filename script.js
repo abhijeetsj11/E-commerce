@@ -4,13 +4,14 @@ document.addEventListener('DOMContentLoaded', function(){
 	const cartBtn = document.querySelector('.cart-btn');
 	const searchInput = document.getElementById('site-search');
 
-	// Example starting count (matches markup)
-	let count = parseInt(cartBadge?.textContent || '0', 10);
+	// Initialize cart count to 0 on page load
+	let count = 0;
 
 	function updateBadge(){
 		if(!cartBadge) return;
 		cartBadge.textContent = count > 99 ? '99+' : String(count);
-		cartBadge.style.display = count > 0 ? 'inline-flex' : 'none';
+		// Always show badge; user request: show 0 by default
+		cartBadge.style.display = 'inline-flex';
 	}
 
 	// Click cart to demo increment (remove in production)

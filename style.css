@@ -187,8 +187,8 @@ body{
 }
 .cart-badge{
 	position:absolute;
-	top:6px;
-	right:6px;
+	top:-8px;
+	right:0;
 	min-width:18px;
 	height:18px;
 	padding:0 5px;
@@ -200,6 +200,8 @@ body{
 	background:var(--muted-indigo);
 	border-radius:999px;
 	box-shadow: 0 3px 8px rgba(91,79,189,0.16);
+	z-index: 1;
+	pointer-events: none;
 }
 
 .hero-mockup{
