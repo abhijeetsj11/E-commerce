@@ -56,6 +56,23 @@ body{
 	display:flex;
 	gap:22px;
 }
+.main-nav{position:relative}
+.main-nav ul{position:relative}
+.main-nav a.active::after{display:none}
+
+.nav-underline{
+	position:absolute;
+	bottom:-8px;
+	left:0;
+	height:3px;
+	width:40px;
+	border-radius:6px;
+	background: linear-gradient(90deg, var(--muted-indigo), rgba(91,79,189,0.65));
+	transition: left .32s cubic-bezier(.2,.9,.2,1), width .32s cubic-bezier(.2,.9,.2,1), opacity .24s ease;
+	box-shadow: 0 6px 18px rgba(91,79,189,0.08);
+	opacity:0;
+	pointer-events:none;
+}
 .main-nav a{
 	text-decoration:none;
 	color:var(--slate-800);
@@ -181,4 +198,50 @@ body{
 	.nav-container{padding:12px 14px}
 	.main-nav{display:none}
 	.search input{width:120px}
+}
+
+/* Footer styles */
+.site-footer{
+	padding:48px 20px 40px;
+}
+.footer-container{
+	max-width:1400px;
+	margin:0 auto;
+	padding:24px 22px;
+	background:transparent;
+}
+.footer-grid{
+	display:grid;
+	grid-template-columns: 1.4fr 1fr 0.9fr 1fr;
+	gap:28px;
+	align-items:start;
+}
+.footer-col h4{
+	margin:0 0 10px 0;
+	font-size:15px;
+	color: #3f3f48;
+	font-weight:600;
+}
+.footer-desc{color:#6b6b74;margin:10px 0 0 0;max-width:300px}
+.footer-address{font-style:normal;color:#6b6b74;margin-bottom:8px}
+.footer-link, .footer-links a, .social-link{color:var(--slate-800);text-decoration:none;display:inline-block;margin:6px 0;font-size:14px}
+.footer-links{list-style:none;padding:0;margin:0}
+.footer-links li{margin:6px 0}
+.social-list{list-style:none;padding:0;margin:0;display:flex;gap:10px;flex-wrap:wrap}
+.social-link{padding:6px 8px;border-radius:8px;background:rgba(95,87,165,0.04);font-size:13px}
+.social-link:hover{background:rgba(91,79,189,0.08)}
+
+/* Icon sizing for social links */
+.social-link{width:44px;height:44px;padding:0;display:inline-flex;align-items:center;justify-content:center;border-radius:10px}
+.social-link svg{width:18px;height:18px;display:block;color:var(--slate-800)}
+.social-link:focus{outline:2px solid rgba(91,79,189,0.16);outline-offset:3px}
+
+.footer-bottom{border-top:1px solid rgba(34,34,40,0.04);margin-top:22px;padding-top:18px;display:flex;justify-content:space-between;align-items:center}
+.footer-bottom p{margin:0;color:#8b8b92;font-size:13px}
+
+/* Footer responsive */
+@media (max-width:900px){
+	.footer-grid{grid-template-columns:1fr;gap:18px}
+	.footer-container{padding:18px}
+	.footer-bottom{flex-direction:column;gap:10px;align-items:flex-start}
 }

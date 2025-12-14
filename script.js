@@ -32,5 +32,45 @@ document.addEventListener('DOMContentLoaded', function(){
 		});
 	}
 
+	// Animated nav underline
+	const nav = document.querySelector('.main-nav');
+	const navLinks = Array.from(document.querySelectorAll('.main-nav a'));
+	const underline = document.querySelector('.nav-underline');
+
+	function placeUnderline(el){
+		if(!el || !underline || !nav) return;
+		const navRect = nav.getBoundingClientRect();
+		const rect = el.getBoundingClientRect();
+		const left = rect.left - navRect.left;
+		underline.style.left = Math.round(left) + 'px';
+		underline.style.width = Math.round(rect.width) + 'px';
+		underline.style.opacity = '1';
+	}
+
+	// initialize
+	const initial = document.querySelector('.main-nav a.active') || navLinks[0];
+	placeUnderline(initial);
+
+	// click/focus handlers
+	navLinks.forEach(link=>{
+		link.addEventListener('click', (e)=>{
+			// allow normal navigation; update active class for demo
+			navLinks.forEach(l=>l.classList.remove('active'));
+			link.classList.add('active');
+			placeUnderline(link);
+		});
+		link.addEventListener('focus', ()=>placeUnderline(link));
+	});
+
+	// reposition on resize (debounced)
+	let rto;
+	window.addEventListener('resize', ()=>{
+		clearTimeout(rto);
+		rto = setTimeout(()=>{
+			const active = document.querySelector('.main-nav a.active') || navLinks[0];
+			placeUnderline(active);
+		}, 120);
+	});
+
 	updateBadge();
 });
