@@ -16,6 +16,7 @@ body{
 	font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
 	color:var(--slate-800);
 	background: linear-gradient(180deg, var(--warm-gradient-start) 0%, var(--warm-gradient-end) 60%);
+	padding-top:140px;
 	-webkit-font-smoothing:antialiased;
 	-moz-osx-font-smoothing:grayscale;
 }
@@ -23,7 +24,15 @@ body{
 .page{display:flex;flex-direction:column;gap:80px;padding:0 20px 120px}
 
 .site-header{
-	padding:48px 28px;
+	position:fixed;
+	top:0;
+	left:0;
+	width:100%;
+	z-index:1000;
+	padding:32px 28px;
+	background: linear-gradient(180deg, rgba(253,246,240,0.98) 0%, rgba(249,245,243,0.94) 90%);
+	backdrop-filter: blur(6px);
+	box-shadow: 0 10px 28px rgba(42,40,45,0.08);
 }
 
 .nav-container{
